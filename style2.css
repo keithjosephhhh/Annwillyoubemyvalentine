@@ -1,0 +1,367 @@
+body {
+    background: #000000;
+    font-family: 'Comic Sans MS', cursive;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.library {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Neon Button Styles */
+.neon-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    position: relative;
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+}
+
+/* Different neon colors */
+.blue {
+    border: 2px solid #008cff;
+    box-shadow: 0 0 10px #008cff, 0 0 40px #008cff;
+}
+.blue:hover {
+    background: #008cff;
+    box-shadow: 0 0 20px #008cff, 0 0 60px #008cff;
+}
+
+.cyan {
+    border: 2px solid #00e1ff;
+    box-shadow: 0 0 10px #00e1ff, 0 0 40px #00e1ff;
+}
+.cyan:hover {
+    background: #00e1ff;
+    box-shadow: 0 0 20px #00e1ff, 0 0 60px #00e1ff;
+}
+
+.violet {
+    border: 2px solid #8a2be2;
+    box-shadow: 0 0 10px #8a2be2, 0 0 40px #8a2be2;
+}
+.violet:hover {
+    background: #8a2be2;
+    box-shadow: 0 0 20px #8a2be2, 0 0 60px #8a2be2;
+}
+
+.indigo {
+    border: 2px solid #4b0082;
+    box-shadow: 0 0 10px #4b0082, 0 0 40px #4b0082;
+}
+.indigo:hover {
+    background: #4b0082;
+    box-shadow: 0 0 20px #4b0082, 0 0 60px #4b0082;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1a1a1a;
+    padding: 30px;
+    max-width: 80%;
+    max-height: 80vh; /* Limit height to 80% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 2px solid #0ff;
+    box-shadow: 0 0 20px #0ff;
+    color: #fff;
+    border-radius: 10px; /* Add rounded corners */
+}
+
+.modal-body {
+    max-height: 60vh; /* Limit the height of the poem text area */
+    overflow-y: auto; /* Enable scrolling for the poem text */
+    padding: 10px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.close {
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+.close:hover {
+    color: red;
+}
+
+
+/* Popup Form Styling */
+.card {
+    width: 250px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: rgba(1, 21, 34, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 15px #00bfff;
+    transition: 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 100;
+}
+
+/* Show the form when active */
+.card.active {
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Tools (Close Button) */
+.tools {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.circle {
+    padding: 5px;
+}
+
+.box {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red { background-color: #ff605c; cursor: pointer; }
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+h1 {
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    font-size: 3em;
+}
+
+.library {
+    display: flex;               /* Use flexbox for layout */
+    justify-content: center;     /* Center horizontally */
+    align-items: center;         /* Center vertically */
+    flex-wrap: wrap;            /* Allow wrapping of buttons */
+    gap: 30px;                  /* Space between buttons */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1a1a1a;
+    padding: 30px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    border: 2px solid #0ff;
+    box-shadow: 0 0 20px #0ff;
+    color: #fff;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Heart styles */
+.love-heart:before, #switch { display: none; }
+.love-heart, .love-heart::after {
+    border-color: #ff1493;
+    border: 1px solid;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    width: 10px;
+    height: 8px;
+    border-bottom: 0;
+}
+.round {
+    position: absolute;
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+    background: #ff1493;
+    box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
+    border-radius: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all .5s ease;
+    animation: check-animation2 .5s forwards;
+}
+input:checked + label .round {
+    transform: translate(0px, 0px);
+    animation: check-animation .5s forwards;
+    background-color: #ADD8E6;
+}
+@keyframes check-animation {
+    0% { transform: translate(0px, 0px); }
+    50% { transform: translate(0px, 7px); }
+    100% { transform: translate(7px, 7px); }
+}
+@keyframes check-animation2 {
+    0% { transform: translate(7px, 7px); }
+    50% { transform: translate(0px, 7px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+
+/* Heart Button Styles */
+/* Add these styles to style2.css */
+.love-heart:before, #switch {
+    display: none;
+}
+
+.love-heart, .love-heart::after {
+    border-color: #ff1493;
+    border: 1px solid;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    width: 10px;
+    height: 8px;
+    border-bottom: 0;
+}
+
+.round {
+    position: absolute;
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+    background: #ff1493;
+    box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
+    border-radius: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all .5s ease;
+    animation: check-animation2 .5s forwards;
+}
+
+input:checked + label .round {
+    transform: translate(0px, 0px);
+    animation: check-animation .5s forwards;
+    background-color: #ADD8E6;
+}
+
+@keyframes check-animation {
+    0% { transform: translate(0px, 0px); }
+    50% { transform: translate(0px, 7px); }
+    100% { transform: translate(7px, 7px); }
+}
+
+@keyframes check-animation2 {
+    0% { transform: translate(7px, 7px); }
+    50% { transform: translate(0px, 7px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+.love-heart {
+    box-sizing: border-box;
+    position: relative;
+    transform: rotate(-45deg) translate(-50%, -33px) scale(4);
+    display: block;
+    border-color: #ff1493;
+    cursor: pointer;
+    top: 0;
+}
+
+input:checked + .love-heart, 
+input:checked + .love-heart::after, 
+input:checked + .love-heart .bottom {
+    border-color: #37b7e1;
+    box-shadow: inset 6px -5px 0px 2px #ADD8E6;
+}
+
+.love-heart::after, 
+.love-heart .bottom {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-color: #ff1493;
+}
+
+.love-heart::after {
+    right: -9px;
+    transform: rotate(90deg);
+    top: 7px;
+}
+
+.love-heart .bottom {
+    width: 11px;
+    height: 11px;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #ff1493;
+    left: -1px;
+    top: 5px;
+    border-radius: 0px 0px 0px 5px;
+}
+
+.love {
+    margin-bottom: 20px;
+}
+
+  
+
+
+
+
+

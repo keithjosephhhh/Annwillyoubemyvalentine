@@ -1,0 +1,289 @@
+/* General Styles */
+body {
+    background: url('background.jpg.avif') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Comic Sans MS', cursive;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Heart Button Styles */
+.love-heart:before, #switch {
+    display: none;
+}
+
+.love-heart, .love-heart::after {
+    border-color: #ff1493;
+    border: 1px solid;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    width: 10px;
+    height: 8px;
+    border-bottom: 0;
+}
+
+.round {
+    position: absolute;
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+    background: #ff1493;
+    box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
+    border-radius: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all .5s ease;
+    animation: check-animation2 .5s forwards;
+}
+
+input:checked + label .round {
+    transform: translate(0px, 0px);
+    animation: check-animation .5s forwards;
+    background-color: #ADD8E6;
+}
+
+@keyframes check-animation {
+    0% { transform: translate(0px, 0px); }
+    50% { transform: translate(0px, 7px); }
+    100% { transform: translate(7px, 7px); }
+}
+
+@keyframes check-animation2 {
+    0% { transform: translate(7px, 7px); }
+    50% { transform: translate(0px, 7px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+.love-heart {
+    box-sizing: border-box;
+    position: relative;
+    transform: rotate(-45deg) translate(-50%, -33px) scale(4);
+    display: block;
+    border-color: #ff1493;
+    cursor: pointer;
+    top: 0;
+}
+
+input:checked + .love-heart, 
+input:checked + .love-heart::after, 
+input:checked + .love-heart .bottom {
+    border-color: #37b7e1;
+    box-shadow: inset 6px -5px 0px 2px #ADD8E6;
+}
+
+.love-heart::after, 
+.love-heart .bottom {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-color: #ff1493;
+}
+
+.love-heart::after {
+    right: -9px;
+    transform: rotate(90deg);
+    top: 7px;
+}
+
+.love-heart .bottom {
+    width: 11px;
+    height: 11px;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #ff1493;
+    left: -1px;
+    top: 5px;
+    border-radius: 0px 0px 0px 5px;
+}
+
+.love {
+    margin-bottom: 20px;
+}
+
+/* Book Styles */
+.book {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    perspective: 1500px;
+    margin: 50px auto;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: white;
+    transform-origin: left center;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.page.active {
+    display: block;
+    z-index: 1;
+}
+
+.page.flipped {
+    transform: rotateY(-180deg);
+}
+
+.page-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+
+.page-image {
+    width: 80%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.page-heading {
+    color: #ff69b4;
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.note {
+    color: #ff69b4;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+button {
+    background: #ADD8E6;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background: #ff1493;
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+}
+
+.navigation-buttons {
+    margin-top: 20px;
+}
+
+.proposal-buttons {
+    margin-top: 20px;
+}
+
+.valentine-text {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.8);
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+
+@keyframes hearts-explosion {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.floating-heart {
+    position: fixed;
+    color: #ff1493;
+    font-size: 24px;
+    pointer-events: none;
+    animation: float-up 4s linear forwards;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.no-animation {
+    position: fixed;
+    transition: transform 0.3s;
+}
+
+/* Dancing button animation */
+@keyframes dance {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-10deg) scale(1.1); }
+    75% { transform: rotate(10deg) scale(1.1); }
+}
+
+/* Shake animation for the No button */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}

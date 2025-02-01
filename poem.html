@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Library - Poems</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="love">
+            <input id="switch" type="checkbox">
+            <label class="love-heart" for="switch">
+                <i class="left"></i>
+                <i class="right"></i>
+                <i class="bottom"></i>
+                <div class="round"></div>
+            </label>
+        </div>
+        <h1 class="valentine-text">Poems for the Love of my Life! 💌</h1>
+
+        <div class="library">
+            <button class="neon-button blue" onclick="openPoem(1)">The Answer to My Prayers 💙✨</button>
+            <button class="neon-button cyan" onclick="openPoem(2)">You're Pretty 🌷👸🏻</button>
+            <button class="neon-button violet" onclick="openPoem(3)">A poet's beautiful verse ✍🏼❤️</button>
+            <button class="neon-button indigo" onclick="openPoem(4)">I want you 💜🥺</button>
+        </div> 
+
+        <!-- Poem Modal -->
+        <div id="poemModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closePoem()">&times;</span>
+                    <h2 id="poemTitle"></h2>
+                </div>
+                <div class="modal-body">
+                    <p id="poemText"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
