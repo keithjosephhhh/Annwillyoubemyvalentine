@@ -72,6 +72,16 @@ body {
     box-shadow: 0 0 20px #4b0082, 0 0 60px #4b0082;
 }
 
+.pink {
+    border: 2px solid #ff1493;
+    box-shadow: 0 0 10px #ff1493, 0 0 40px #ff1493;
+}
+
+.pink:hover {
+    background: #ff1493;
+    box-shadow: 0 0 20px #ff1493, 0 0 60px #ff1493;
+}
+
 /* Modal Styles */
 .modal {
     display: none;
@@ -360,8 +370,6 @@ input:checked + .love-heart .bottom {
 }
 
   
-
-
 
 
 
