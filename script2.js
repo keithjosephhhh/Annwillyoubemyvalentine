@@ -87,6 +87,57 @@ const poems = [
         
         That smile of yours can even cure cancer, what am I in front of it. 
         For it melts my heart, my ego, my pride and surrenders them all at your feet.`
+    }, 
+    {
+        title: "You deserve the world",
+        text:  `You deserve every joy this world can bring my girl,
+        A tear on your face, makes my heart unfurl.  
+        
+        You deserve every single flower that blooms my baby,
+        A smile on your face, my heart goes crazy. 
+        
+        You deserve every single blessing my love,
+        A sparkle in your eyes, our Lord loves from above. 
+        
+        You deserve the wish of every shooting star, my life. 
+        A whisper in my heart wishes for you to be my wife. 
+        
+        You deserve to be the muse of poets untold,
+        I miss your touch, your warmth and your soul
+        
+        You deserve the whole world my moon pie,
+        If anyone makes you cry, I’ll make sure he dies
+        
+        My baby You deserve laughter that never fades,
+        And I’ll always be a hand that’ll hold you on your weary days
+        
+        Molly you deserve winter mornings wrapped in golden light,
+        And my arms to always hold you safe at night
+        
+        Baby, you deserve my hands that will never let go
+        Through wind, storms, fires, and all your highs and lows
+        
+        Cutu you deserve the songs sung by the softest breeze
+        Our love is strong, it bends the seas
+        
+        You deserve all my love as vast as the sky,
+        Love that’ll never shake or ever run dry
+        
+        Baby, you deserve the sky when the night turns blue
+        Because now, even the moon is jealous of you
+        
+        You deserve a world, where your dreams take flight 
+        With me as your shadow, your king, and your knight
+        
+        Molly you deserve whispers in a cold night’s air
+        Those will be my soft words of love beyond compare 
+        
+        You deserve moments of love, that will never fade. 
+        For my heart will always be for you, unafraid 
+        
+        Above all of this baby, you deserve me. If fate allows
+        To love you deeply today, tomorrow and forever now `
+
     }
 ];
 
