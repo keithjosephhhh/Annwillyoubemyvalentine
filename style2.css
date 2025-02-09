@@ -82,6 +82,16 @@ body {
     box-shadow: 0 0 20px #ff1493, 0 0 60px #ff1493;
 }
 
+.darkpink {
+    border: 2px solid #C71585;
+    box-shadow: 0 0 10px #C71585, 0 0 40px #C71585;
+}
+
+.darkpink:hover {
+    background: #C71585;
+    box-shadow: 0 0 20px #C71585, 0 0 60px #C71585;
+}
+
 /* Modal Styles */
 .modal {
     display: none;
